@@ -12,11 +12,12 @@ import { FooterComponent } from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { PortfolioModalsComponent } from './portfolio-modals/portfolio-modals.component';
 import { PortfolioModalComponent } from './portfolio-modals/portfolio-modal/portfolio-modal.component';
+import { TopContainerModule } from './top-container/top-container.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
+    // NavigationComponent,
     MasterHeaderComponent,
     PortfolioComponent,
     AboutComponent,
@@ -28,7 +29,8 @@ import { PortfolioModalComponent } from './portfolio-modals/portfolio-modal/port
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TopContainerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
