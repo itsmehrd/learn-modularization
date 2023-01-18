@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { PortfolioModalsComponent } from './portfolio-modals/portfolio-modals.component';
+import { PortfolioModalComponent } from './portfolio-modals/portfolio-modal/portfolio-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PortfolioModalsComponent } from './portfolio-modals/portfolio-modals.co
     ContactComponent,
     FooterComponent,
     CopyrightComponent,
-    PortfolioModalsComponent
+    PortfolioModalsComponent,
+    PortfolioModalComponent
   ],
   imports: [
     BrowserModule,
