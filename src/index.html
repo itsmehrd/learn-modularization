@@ -13,7 +13,7 @@
     <meta name="author" content="" />
 
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
@@ -31,14 +31,57 @@
       type="text/css"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
     <app-root></app-root>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        // Navbar shrink function
+        var navbarShrink = function () {
+          const navbarCollapsible = document.body.querySelector("#mainNav");
+          if (!navbarCollapsible) {
+            return;
+          }
+          if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove("navbar-shrink");
+          } else {
+            navbarCollapsible.classList.add("navbar-shrink");
+          }
+        };
+
+        // Shrink the navbar
+        navbarShrink();
+
+        // Shrink the navbar when page is scrolled
+        document.addEventListener("scroll", navbarShrink);
+
+        // Activate Bootstrap scrollspy on the main nav element
+        const mainNav = document.body.querySelector("#mainNav");
+        if (mainNav) {
+          new bootstrap.ScrollSpy(document.body, {
+            target: "#mainNav",
+            offset: 72,
+          });
+        }
+
+        // Collapse responsive navbar when toggler is visible
+        const navbarToggler = document.body.querySelector(".navbar-toggler");
+        const responsiveNavItems = [].slice.call(
+          document.querySelectorAll("#navbarResponsive .nav-link")
+        );
+        responsiveNavItems.map(function (responsiveNavItem) {
+          responsiveNavItem.addEventListener("click", () => {
+            if (window.getComputedStyle(navbarToggler).display !== "none") {
+              navbarToggler.click();
+            }
+          });
+        });
+      });
+    </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
