@@ -6,6 +6,6 @@ import { PortfolioModalComponent } from './portfolio-modal/portfolio-modal.compo
 @NgModule({
   declarations: [PortfolioModalsComponent, PortfolioModalComponent],
   imports: [CommonModule],
-  exports: [PortfolioModalsComponent, PortfolioModalComponent],
+  exports: [PortfolioModalsComponent],
 })
 export class PortfolioModalsModule {}
