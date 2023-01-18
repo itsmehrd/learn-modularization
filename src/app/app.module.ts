@@ -8,13 +8,13 @@ import { PageContainerModule } from './page-container/page-container.module';
 import { TopContainerModule } from './top-container/top-container.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TopContainerModule,
-    // PageContainerModule,
-    // FootContainerModule,
+    PageContainerModule,
+    FootContainerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -15,13 +15,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     AboutComponent,
     ContactComponent,
   ],
-  imports: [CommonModule, PortfolioModalsModule],
-  exports: [
-    PageContainerComponent,
-    MasterHeaderComponent,
-    PortfolioComponent,
-    AboutComponent,
-    ContactComponent,
+  imports: [
+    CommonModule,
+    PortfolioModalsModule,
   ],
+  exports: [PageContainerComponent],
 })
 export class PageContainerModule {}
