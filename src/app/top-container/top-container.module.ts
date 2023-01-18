@@ -6,6 +6,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 @NgModule({
   declarations: [TopContainerComponent, NavigationComponent],
   imports: [CommonModule],
-  exports: [TopContainerModule, NavigationComponent],
+  exports: [TopContainerComponent, NavigationComponent],
 })
 export class TopContainerModule {}
